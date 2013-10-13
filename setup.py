@@ -18,6 +18,9 @@ setup(
       long_description=open('README.md').read(),
       
       keywords = 'Url minifier python library using google, bitly, supr, dottk',
+      packages=['microurl'],
+      include_package_data=True,
+      zip_safe=True,
       )
       
       
