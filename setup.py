@@ -15,7 +15,7 @@ setup(
       py_modules=['microurl'],
       
       license=open('LICENSE').read(),
-      long_description=open('README.md').read(),
+      long_description=open('README.rst').read(),
       
       keywords = 'Url minifier python library using google, bitly, supr, dottk',
       packages=['microurl'],
