@@ -8,10 +8,9 @@ setup(
       description='microurl is a python module to create minfied urls',
       author='MicroPyramid',
       author_email='MicroPyramid@googlegroups.com',
-      maintainer='Ashwin',
+      maintainer='Archana, Ashwin',
       maintainer_email='MicroPyramid@googlegroups.com',
       url='http://github.com/micropyramid/microurl',
-      py_modules=['microurl'],
 
       license='GPL3',
       long_description=open('README.rst').read(),
@@ -21,6 +20,3 @@ setup(
       include_package_data=True,
       zip_safe=True,
       )
-
-
-
