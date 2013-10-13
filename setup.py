@@ -17,14 +17,6 @@ setup(
       license=open('LICENSE').read(),
       long_description=open('README.md').read(),
       
-      '''
-      requires=[
-        'Django(>=1.3)',
-        'pydns',
-      ],
-      '''
-      
-      download_url = 'https://github.com/MicroPyramid/microurl.git',
       keywords = 'Url minifier python library using google, bitly, supr, dottk',
       )
       
