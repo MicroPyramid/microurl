@@ -2,15 +2,7 @@ microurl
 ========
 
 
-.. image:: https://coveralls.io/repos/MicroPyramid/microurl/badge.png
-  :target: https://coveralls.io/r/MicroPyramid/microurl
-
-
-
-========
-
 python library for url minification.
-
 
 download this, extract/unzip and copy to your python packages folder
 
