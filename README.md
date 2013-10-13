@@ -4,7 +4,7 @@ microurl
 python library for url minification.
 
 
-download this and copy to your python packages folder
+download this, extract/unzip and copy to your python packages folder
 
 on linux, it must be /usr/local/lib/python2.7/dist-packages/
 
