@@ -1,7 +1,11 @@
 microurl
 ========
 
-[![Coverage Status](https://coveralls.io/repos/MicroPyramid/microurl/badge.png)](https://coveralls.io/r/MicroPyramid/microurl)
+
+.. image:: https://coveralls.io/repos/MicroPyramid/microurl/badge.png
+  :target: https://coveralls.io/r/MicroPyramid/microurl
+
+
 
 ========
 
