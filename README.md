@@ -1,6 +1,10 @@
 microurl
 ========
 
+[![Coverage Status](https://coveralls.io/repos/MicroPyramid/microurl/badge.png)](https://coveralls.io/r/MicroPyramid/microurl)
+
+========
+
 python library for url minification.
 
 
