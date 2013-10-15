@@ -40,6 +40,7 @@ First, you'll want to import your desired minfier from microurl
 .. code-block:: python
 
     from microurl import google_mini
+    
 
 Basic Usage
 -----------
@@ -51,6 +52,51 @@ Basic Usage
     minified = google_mini('validurl', 'Google_API_KEY')
 
 its as simple as that.
+
+
+
+Authentication for bitly
+------------------------
+
+.. code-block:: python
+    
+    from microurl import bitlyauthentication
+   
+    authentication = bitlyauthentication(client_id,client_secret,redirect_uri)
+    
+    auth_url=authentication.authorization_url()
+    
+open auth_url in your browser.After authorizing app, you will be redirected to redirect_url with code perameter.
+
+.. code-block:: python
+    
+    access_token=authentication.get_accesstoken_from_code(code) # code that you get to redirect_url in the above step
+    
+    
+Authentication using username and password
+------------------------------------------
+
+.. code-block:: python
+
+    access_token=authentication.get_accesstoken_from_username_pwd(bitlyusername or login email,password)
+    
+    
+
+Basic Usage
+-----------
+
+**Function definitions (i.e. shorturl()) can be found by reading over microurl/bitly.py**
+
+.. code-block:: python
+
+    from microurl import bitlyapi
+    
+    bitly=bitlyapi(access_token) # access_token is getting from previous steps
+    
+    minified=bitly.shorturl(longurl,domain)['url'] # domain is optional here
+    
+    
+
 
 
 Questions, Comments, etc?
