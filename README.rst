@@ -132,7 +132,7 @@ Basic Usage
 
 .. code-block:: python
 
-    bitly.user_linkhistory(bitlylink,limit=20,offset=1,created_after="1381000000',created_before='1381844314',expand_client_id=True,archived="both",private="both")
+    bitly.user_linkhistory(bitlylink,limit=20,offset=1,created_after='1381000000',created_before='1381844314',expand_client_id=True,archived="both",private="both")
     
     # here all fields are optional   
     
