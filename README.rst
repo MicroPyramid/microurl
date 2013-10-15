@@ -96,14 +96,14 @@ Basic Usage
     minified=bitly.shorturl(longurl,domain)['url'] # domain is optional here
     
     
-** To get detail information of bitlylink. **
+**To get detail information of bitlylink.**
 
 .. code-block:: python
 
     bitly.url_info(bitlylink,expand_user='True | False',hash='one or more bitly hashes') # expand_user,hash are optional here
     
     
-** To get the number of clicks on a single bitly link. **
+**To get the number of clicks on a single bitly link.**
 
 .. code-block:: python
 
@@ -112,7 +112,7 @@ Basic Usage
     # here except bitlylink all are optional 
     
     
-** To get the number of shares on a single bitly link. **
+**To get the number of shares on a single bitly link.**
 
 .. code-block:: python
 
@@ -120,15 +120,15 @@ Basic Usage
     
     # here except bitlylink all are optional 
     
-    
-** To get loggedin user info **
+   
+**To get loggedin user info**
 
 .. code-block:: python
 
     bitly.user_info()
     
 
-** To get user link history in reverse chronological order.**
+**To get user link history in reverse chronological order.**
 
 .. code-block:: python
 
