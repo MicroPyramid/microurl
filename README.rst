@@ -96,6 +96,47 @@ Basic Usage
     minified=bitly.shorturl(longurl,domain)['url'] # domain is optional here
     
     
+** To get detail information of bitlylink. **
+
+.. code-block:: python
+
+    bitly.url_info(bitlylink,expand_user='True | False',hash='one or more bitly hashes') # expand_user,hash are optional here
+    
+    
+** To get the number of clicks on a single bitly link. **
+
+.. code-block:: python
+
+    bitly.link_clicks(bitlylink,unit="day",units=10,timezone=-4,limit=20,unit_reference_ts="now")
+    
+    # here except bitlylink all are optional 
+    
+    
+** To get the number of shares on a single bitly link. **
+
+.. code-block:: python
+
+    bitly.link_shares(bitlylink,unit="day",units=10,timezone=-4,limit=20,unit_reference_ts="now")
+    
+    # here except bitlylink all are optional 
+    
+    
+** To get loggedin user info **
+
+.. code-block:: python
+
+    bitly.user_info()
+    
+
+** To get user link history in reverse chronological order.**
+
+.. code-block:: python
+
+    bitly.user_linkhistory(bitlylink,limit=20,offset=1,created_after="1381000000',created_before='1381844314',expand_client_id=True,archived="both",private="both")
+    
+    # here all fields are optional   
+    
+
 
 
 
