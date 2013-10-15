@@ -8,8 +8,6 @@ Features
     - URL Minifier
 - Bitly
     - URL Minifier
-- Supr
-    - URL Minifier
 
 
 Installation
