@@ -40,7 +40,7 @@ First, you'll want to import your desired minfier from microurl
 .. code-block:: python
 
     from microurl import google_mini
-    
+
 
 Basic Usage
 -----------
@@ -48,7 +48,7 @@ Basic Usage
 **Function definitions (i.e. google_mini()) can be found by reading over microurl/google.py**
 
 .. code-block:: python
-    
+
     minified = google_mini('validurl', 'Google_API_KEY')
 
 its as simple as that.
@@ -59,28 +59,27 @@ Authentication for bitly
 ------------------------
 
 .. code-block:: python
-    
+
     from microurl import bitlyauthentication
-   
-    authentication = bitlyauthentication(client_id,client_secret,redirect_uri)
-    
+
+    authentication = bitlyauthentication(client_id, client_secret, redirect_uri)
+
     auth_url=authentication.authorization_url()
-    
+
 open auth_url in your browser.After authorizing app, you will be redirected to redirect_url with code perameter.
 
 .. code-block:: python
-    
+
     access_token=authentication.get_accesstoken_from_code(code) # code that you get to redirect_url in the above step
-    
-    
+
+
 Authentication using username and password
 ------------------------------------------
 
 .. code-block:: python
 
     access_token=authentication.get_accesstoken_from_username_pwd(bitlyusername or login email,password)
-    
-    
+
 
 Basic Usage
 -----------
@@ -90,63 +89,64 @@ Basic Usage
 .. code-block:: python
 
     from microurl import bitlyapi
-    
+
     bitly=bitlyapi(access_token) # access_token is getting from previous steps
-    
+
     minified=bitly.shorturl(longurl,domain)['url'] # domain is optional here
-    
-    
+
+
 **To get detail information of bitlylink.**
 
 .. code-block:: python
 
     bitly.url_info(bitlylink,expand_user='True | False',hash='one or more bitly hashes') # expand_user,hash are optional here
-    
-    
+
+
 **To get the number of clicks on a single bitly link.**
 
 .. code-block:: python
 
-    bitly.link_clicks(bitlylink,unit="day",units=10,timezone=-4,limit=20,unit_reference_ts="now")
-    
-    # here except bitlylink all are optional 
-    
-    
+    bitly.link_clicks(bitlylink, unit="day", units=10, timezone=-4, limit=20, unit_reference_ts="now")
+
+    # here except bitlylink all are optional
+
 **To get the number of shares on a single bitly link.**
 
 .. code-block:: python
 
-    bitly.link_shares(bitlylink,unit="day",units=10,timezone=-4,limit=20,unit_reference_ts="now")
-    
-    # here except bitlylink all are optional 
-    
-   
+    bitly.link_shares(bitlylink, unit="day", units=10, timezone=-4, limit=20, unit_reference_ts="now")
+
+    # here except bitlylink all are optional
+
+
 **To get loggedin user info**
 
 .. code-block:: python
 
     bitly.user_info()
-    
+
 
 **To get user link history in reverse chronological order.**
 
 .. code-block:: python
 
-    bitly.user_linkhistory(bitlylink,limit=20,offset=1,created_after='1381000000',created_before='1381844314',expand_client_id=True,archived="both",private="both")
-    
-    # here all fields are optional   
-    
+    bitly.user_linkhistory(bitlylink, limit=20, offset=1, created_after='1381000000', created_before='1381844314', expand_client_id=True, archived="both", private="both")
 
-
+    # here all fields are optional
 
 
 Questions, Comments, etc?
 -------------------------
 
-Our hope is that microurl is so simple that you'd never *have* to ask any questions, but if you feel the need to contact us for this (or other) reasons, you can hit us up at micropyramid@googlegroups.com.
+https://github.com/MicroPyramid/microurl/issues
 
 
 Want to help?
 -------------
 
 microurl is useful, but ultimately only as useful as the people using it (say that ten times fast!). If you'd like to help, write example code, contribute patches, document things on the wiki, tweet about it. Your help is always appreciated!
+
+
+For more Updates
+----------------
+https://micropyramid.com/opensource/microurl

@@ -188,7 +188,11 @@ class bitlyapi(object):
             'get', self.ssl_host+'v3/user/info', params)
         return response
 
-    def user_linkhistory(self, link=None, limit=None, offset=None, created_before=None, created_after=None, modified_after=None, expand_client_id=None, archived=None, private=None, user=None):
+    def user_linkhistory(
+            self, link=None, limit=None, offset=None, created_before=None,
+            created_after=None, modified_after=None, expand_client_id=None,
+            archived=None, private=None, user=None):
+
         params = dict(access_token=self.access_token)
         if link:
             params['link'] = link
