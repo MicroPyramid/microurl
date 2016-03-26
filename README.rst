@@ -6,6 +6,7 @@ Features
 --------
 - Google
     - URL Minifier
+    - QR Generator
 - Bitly
     - URL Minifier
 
@@ -53,6 +54,13 @@ Basic Usage
 
 its as simple as that.
 
+
+QR Generator
+-------------
+
+.. Code-block:: python
+
+    qr_url = qrcode(url)
 
 
 Authentication for bitly
