@@ -1,6 +1,10 @@
 microurl
 ========
+.. image:: https://travis-ci.org/MicroPyramid/microurl.svg?branch=master
+    :target: https://travis-ci.org/MicroPyramid/microurl
+
 python library for url minification.
+
 
 Features
 --------
