@@ -11,5 +11,5 @@ def google_mini(url, Google_API_KEY):
     if r.status_code == 200:
         return r.json().get('id')
     elif r.status_code == 400:
-        raise KeyError('Can not Generate Minified url, Reason:', r.json().get('error', {}).get('errors')[0].get('reason'))
+        raise KeyError('Can not generate minified url, Reason:', r.json().get('error', {}).get('errors')[0].get('reason'))
     raise KeyError('Invalid Google Api Key or url')
