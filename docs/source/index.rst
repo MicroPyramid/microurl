@@ -1,5 +1,5 @@
 .. Microurl documentation master file, created by
-   sphinx-quickstart on Sat Apr  2 18:16:38 2016.
+   sphinx-quickstart on Mon Apr  4 11:26:43 2016.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
@@ -33,7 +33,6 @@ Or, if you want the code that is currently on GitHub
     git clone git://github.com/micropyramid/microurl.git
     cd microurl
     python setup.py install
-    
 
 Contents:
 
@@ -42,7 +41,6 @@ Contents:
 
    googleminifier
    bitlyminifier
-
 
 
 Indices and tables
