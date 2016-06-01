@@ -1,7 +1,23 @@
 microurl
 ========
+
+.. image:: https://readthedocs.org/projects/microurl/badge/?version=latest
+    :target: http://microurl.readthedocs.io/en/latest/?badge=latest
+    :alt: Documentation Status
+
+.. image:: https://img.shields.io/pypi/dm/microurl.svg
+    :target: https://pypi.python.org/pypi/microurl
+    :alt: Downloads
+
+.. image:: https://img.shields.io/pypi/v/microurl.svg
+    :target: https://pypi.python.org/pypi/microurl
+    :alt: Latest Release
+
 .. image:: https://travis-ci.org/MicroPyramid/microurl.svg?branch=master
     :target: https://travis-ci.org/MicroPyramid/microurl
+    
+.. image:: https://coveralls.io/repos/github/MicroPyramid/microurl/badge.svg?branch=master
+    :target: https://coveralls.io/github/MicroPyramid/microurl?branch=master
 
 python library for url minification.
 
