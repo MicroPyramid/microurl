@@ -19,6 +19,9 @@ microurl
 .. image:: https://coveralls.io/repos/github/MicroPyramid/microurl/badge.svg?branch=master
     :target: https://coveralls.io/github/MicroPyramid/microurl?branch=master
 
+.. image:: https://img.shields.io/pypi/l/microurl.svg
+    :target: https://pypi.python.org/pypi/microurl/
+
 python library for url minification.
 
 
