@@ -30,7 +30,7 @@ Features
 Installation
 ------------
 
-Install microurl via `pip <https://pypi.python.org/pypi/microurl//>`_
+Install microurl via `pip <https://pypi.python.org/pypi/microurl/>`_
 
 .. code-block:: bash
 
