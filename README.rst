@@ -1,6 +1,22 @@
+========
 microurl
 ========
+
+.. image:: https://readthedocs.org/projects/microurl/badge/?version=latest
+    :target: http://microurl.readthedocs.io/en/latest/?badge=latest
+.. image:: https://img.shields.io/pypi/dm/microurl.svg
+    :target: https://pypi.python.org/pypi/microurl
+.. image:: https://img.shields.io/pypi/v/microurl.svg
+    :target: https://pypi.python.org/pypi/microurl
+.. image:: https://travis-ci.org/MicroPyramid/microurl.svg?branch=master
+    :target: https://travis-ci.org/MicroPyramid/microurl
+.. image:: https://coveralls.io/repos/github/MicroPyramid/microurl/badge.svg?branch=master
+    :target: https://coveralls.io/github/MicroPyramid/microurl?branch=master
+.. image:: https://img.shields.io/pypi/l/microurl.svg
+    :target: https://pypi.python.org/pypi/microurl/
+
 python library for url minification.
+
 
 Features
 --------
@@ -14,7 +30,7 @@ Features
 Installation
 ------------
 
-Install microurl via `pip <http://www.pip-installer.org/>`_
+Install microurl via `pip <https://pypi.python.org/pypi/microurl/>`_
 
 .. code-block:: bash
 
@@ -158,3 +174,8 @@ microurl is useful, but ultimately only as useful as the people using it (say th
 For more Updates
 ----------------
 https://micropyramid.com/opensource/microurl
+
+
+We welcome your feedback and support, raise github ticket if you want to report a bug. Need new features? `Contact us here`_
+
+.. _contact us here: https://micropyramid.com/contact-us/
