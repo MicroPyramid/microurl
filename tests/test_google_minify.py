@@ -5,6 +5,7 @@ GOOGLE_API_KEY = 'AIzaSyB_nDH7Uvm6-KSbsJD_OqYXA2XmuZ1P1lE'
 
 WRONG_GOOGLE_API_KEY = 'testwrongapikey'
 
+
 class TestGoogleKey(unittest.TestCase):
 
     def test_wrong_google_key(self):

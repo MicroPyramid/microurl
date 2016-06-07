@@ -9,7 +9,12 @@ python:
   - "3.5"
 
 install:
-  "python setup.py install"
+  - python setup.py install
+  - pip install coveralls
 
 script:
-  - python -m unittest discover
+  - python -m unittest tests.test_bitly_minify  tests.test_google_minify
+  - coverage run --source=microurl,tests -m unittest tests.test_bitly_minify  tests.test_google_minify
+
+after_success:
+  coveralls
