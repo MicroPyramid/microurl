@@ -15,14 +15,14 @@ class bitlyapi(object):
             params['domain'] = preferred_domain
         params['access_token'] = self.access_token
 
-        response = self.send_request('get', self.ssl_host+'v3/shorten', params)
+        response = self.send_request('get', self.ssl_host + 'v3/shorten', params)
 
         return response
 
     def expand(self, url):
         params = dict(shortUrl=url)
         params['access_token'] = self.access_token
-        response = self.send_request('get', self.ssl_host+'v3/expand', params)
+        response = self.send_request('get', self.ssl_host + 'v3/expand', params)
 
         return response
 
@@ -33,15 +33,14 @@ class bitlyapi(object):
         if expand_user:
             params['expand_user'] = expand_user
         params['access_token'] = self.access_token
-        response = self.send_request('get', self.ssl_host+'v3/info', params)
-        print (response)
+        response = self.send_request('get', self.ssl_host + 'v3/info', params)
         return response
 
     def link_lookup(self, url):
         params = dict(url=url)
         params['access_token'] = self.access_token
         response = self.send_request(
-            'get', self.ssl_host+'v3/link/lookup', params)
+            'get', self.ssl_host + 'v3/link/lookup', params)
 
         return response
 
@@ -60,14 +59,14 @@ class bitlyapi(object):
             params['archived'] = archived
         params['access_token'] = self.access_token
         response = self.send_request(
-            'get', self.ssl_host+'v3/user/link_edit', params)
+            'get', self.ssl_host + 'v3/user/link_edit', params)
         return response
 
     def user_link_lookup(self, url):
         params = dict(url=url)
         params['access_token'] = self.access_token
         response = self.send_request(
-            'get', self.ssl_host+'v3/user/link_lookup', params)
+            'get', self.ssl_host + 'v3/user/link_lookup', params)
         return response
 
     def user_link_save(self, longUrl, title=None, note=None, private=None, user_ts=None):
@@ -82,14 +81,14 @@ class bitlyapi(object):
         if user_ts:
             params['user_ts'] = user_ts
         response = self.send_request(
-            'get', self.ssl_host+'v3/user/link_save', params)
+            'get', self.ssl_host + 'v3/user/link_save', params)
         return response
 
     def highvalue(self, limit=10):
         params = dict(limit=limit)
         params['access_token'] = self.access_token
         response = self.send_request(
-            'get', self.ssl_host+'v3/highvalue', params)
+            'get', self.ssl_host + 'v3/highvalue', params)
         return response
 
     def search(self, query, limit=10, offset=0, lang='en', cities=None, domain=None, fields=None):
@@ -105,33 +104,33 @@ class bitlyapi(object):
             params['fields'] = fields
 
         params['access_token'] = self.access_token
-        response = self.send_request('get', self.ssl_host+'v3/search', params)
+        response = self.send_request('get', self.ssl_host + 'v3/search', params)
         return response
 
     def bursting_phrases(self):
         params = dict(access_token=self.access_token)
         response = self.send_request(
-            'get', self.ssl_host+'v3/realtime/bursting_phrases', params)
+            'get', self.ssl_host + 'v3/realtime/bursting_phrases', params)
         return response
 
     def hot_phrases(self):
         params = dict(access_token=self.access_token)
         response = self.send_request(
-            'get', self.ssl_host+'v3/realtime/hot_phrases', params)
+            'get', self.ssl_host + 'v3/realtime/hot_phrases', params)
         return response
 
     def clickrate(self, phrase):
         params = dict(access_token=self.access_token)
         params['phrase'] = phrase
         response = self.send_request(
-            'get', self.ssl_host+'v3/realtime/clickrate', params)
+            'get', self.ssl_host + 'v3/realtime/clickrate', params)
         return response
 
     def link_info(self, link):
         params = dict(access_token=self.access_token)
         params['link'] = link
         response = self.send_request(
-            'get', self.ssl_host+'v3/link/info', params)
+            'get', self.ssl_host + 'v3/link/info', params)
         return response
 
     def link_content(self, link, content_type='html'):
@@ -139,42 +138,42 @@ class bitlyapi(object):
         params['link'] = link
         params['content_type'] = content_type
         response = self.send_request(
-            'get', self.ssl_host+'v3/link/content', params)
+            'get', self.ssl_host + 'v3/link/content', params)
         return response
 
     def link_category(self, link):
         params = dict(access_token=self.access_token)
         params['link'] = link
         response = self.send_request(
-            'get', self.ssl_host+'v3/link/category', params)
+            'get', self.ssl_host + 'v3/link/category', params)
         return response
 
     def link_social(self, link):
         params = dict(access_token=self.access_token)
         params['link'] = link
         response = self.send_request(
-            'get', self.ssl_host+'v3/link/social', params)
+            'get', self.ssl_host + 'v3/link/social', params)
         return response
 
     def link_location(self, link):
         params = dict(access_token=self.access_token)
         params['link'] = link
         response = self.send_request(
-            'get', self.ssl_host+'v3/link/location', params)
+            'get', self.ssl_host + 'v3/link/location', params)
         return response
 
     def link_language(self, link):
         params = dict(access_token=self.access_token)
         params['link'] = link
         response = self.send_request(
-            'get', self.ssl_host+'v3/link/language', params)
+            'get', self.ssl_host + 'v3/link/language', params)
         return response
 
     def app_details(self, client_id):
         params = dict(access_token=self.access_token)
         params['client_id'] = client_id
         response = self.send_request(
-            'get', self.ssl_host+'v3/oauth/app', params)
+            'get', self.ssl_host + 'v3/oauth/app', params)
         return response
 
     def user_info(self, login=None, full_name=None):
@@ -185,7 +184,7 @@ class bitlyapi(object):
         if full_name:
             params['full_name'] = self.full_name
         response = self.send_request(
-            'get', self.ssl_host+'v3/user/info', params)
+            'get', self.ssl_host + 'v3/user/info', params)
         return response
 
     def user_linkhistory(
@@ -213,7 +212,7 @@ class bitlyapi(object):
         if user:
             params['user'] = user
         response = self.send_request(
-            'get', self.ssl_host+'v3/user/link_history', params)
+            'get', self.ssl_host + 'v3/user/link_history', params)
         return response
 
     def user_networkhistory(self, offset=None, expand_client_id=None, limit=None, expand_user=None):
@@ -227,103 +226,103 @@ class bitlyapi(object):
         if expand_user:
             params['expand_user'] = expand_user
         response = self.send_request(
-            'get', self.ssl_host+'v3/user/network_history', params)
+            'get', self.ssl_host + 'v3/user/network_history', params)
         return response
 
     def user_tracking_domain_list(self):
         params = dict(access_token=self.access_token)
         response = self.send_request(
-            'get', self.ssl_host+'v3/user/tracking_domain_list', params)
+            'get', self.ssl_host + 'v3/user/tracking_domain_list', params)
         return response
 
     def user_clicks(self, **kwargs):
         params = dict(access_token=self.access_token)
         response = self.send_metrics_request(
-            'get', self.ssl_host+'v3/user/clicks', params, **kwargs)
+            'get', self.ssl_host + 'v3/user/clicks', params, **kwargs)
         return response
 
     def user_countries(self, **kwargs):
         params = dict(access_token=self.access_token)
         response = self.send_metrics_request(
-            'get', self.ssl_host+'v3/user/countries', params, **kwargs)
+            'get', self.ssl_host + 'v3/user/countries', params, **kwargs)
         return response
 
     def user_popular_links(self, **kwargs):
         params = dict(access_token=self.access_token)
         response = self.send_metrics_request(
-            'get', self.ssl_host+'v3/user/popular_links', params, **kwargs)
+            'get', self.ssl_host + 'v3/user/popular_links', params, **kwargs)
         return response
 
     def user_referrers(self, **kwargs):
         params = dict(access_token=self.access_token)
         response = self.send_metrics_request(
-            'get', self.ssl_host+'v3/user/referrers', params, **kwargs)
+            'get', self.ssl_host + 'v3/user/referrers', params, **kwargs)
         return response
 
     def user_referring_domains(self, **kwargs):
         params = dict(access_token=self.access_token)
         response = self.send_metrics_request(
-            'get', self.ssl_host+'v3/user/referring_domains', params, **kwargs)
+            'get', self.ssl_host + 'v3/user/referring_domains', params, **kwargs)
         return response
 
     def user_share_counts(self, **kwargs):
         params = dict(access_token=self.access_token)
         response = self.send_metrics_request(
-            'get', self.ssl_host+'v3/user/share_counts', params, **kwargs)
+            'get', self.ssl_host + 'v3/user/share_counts', params, **kwargs)
         return response
 
     def user_share_counts_by_share_type(self, **kwargs):
         params = dict(access_token=self.access_token)
         response = self.send_metrics_request(
-            'get', self.ssl_host+'v3/user/share_counts_by_share_type', params, **kwargs)
+            'get', self.ssl_host + 'v3/user/share_counts_by_share_type', params, **kwargs)
         return response
 
     def user_shorten_counts(self, **kwargs):
         params = dict(access_token=self.access_token)
         response = self.send_metrics_request(
-            'get', self.ssl_host+'v3/user/shorten_counts', params, **kwargs)
+            'get', self.ssl_host + 'v3/user/shorten_counts', params, **kwargs)
         return response
 
     def link_clicks(self, link, **kwargs):
         params = dict(access_token=self.access_token)
         params['link'] = link
         response = self.send_metrics_request(
-            'get', self.ssl_host+'v3/link/clicks', params, **kwargs)
+            'get', self.ssl_host + 'v3/link/clicks', params, **kwargs)
         return response
 
     def link_countries(self, link, **kwargs):
         params = dict(access_token=self.access_token)
         params['link'] = link
         response = self.send_metrics_request(
-            'get', self.ssl_host+'v3/link/countries', params, **kwargs)
+            'get', self.ssl_host + 'v3/link/countries', params, **kwargs)
         return response
 
     def link_referrers(self, link, **kwargs):
         params = dict(access_token=self.access_token)
         params['link'] = link
         response = self.send_metrics_request(
-            'get', self.ssl_host+'v3/link/referrers', params, **kwargs)
+            'get', self.ssl_host + 'v3/link/referrers', params, **kwargs)
         return response
 
     def link_referrers_by_domain(self, link, **kwargs):
         params = dict(access_token=self.access_token)
         params['link'] = link
         response = self.send_metrics_request(
-            'get', self.ssl_host+'v3/link/referrers_by_domain', params, **kwargs)
+            'get', self.ssl_host + 'v3/link/referrers_by_domain', params, **kwargs)
         return response
 
     def link_referring_domains(self, link, **kwargs):
         params = dict(access_token=self.access_token)
         params['link'] = link
         response = self.send_metrics_request(
-            'get', self.ssl_host+'v3/link/referring_domains', params, **kwargs)
+            'get', self.ssl_host + 'v3/link/referring_domains', params, **kwargs)
         return response
 
     def link_shares(self, link, **kwargs):
         params = dict(access_token=self.access_token)
         params['link'] = link
         response = self.send_metrics_request(
-            'get', self.ssl_host+'v3/link/shares', params, **kwargs)
+            'get', self.ssl_host + 'v3/link/shares', params, **kwargs)
         return response
 
     def link_encoders(self, link, my_network=None, subaccounts=None, limit=None, expand_user=None):
@@ -338,7 +337,7 @@ class bitlyapi(object):
         if expand_user:
             params['expand_user'] = expand_user
         response = self.send_request(
-            'get', self.ssl_host+'v3/link/encoders', params)
+            'get', self.ssl_host + 'v3/link/encoders', params)
         return response
 
     def link_encoders_by_count(self, link, my_network=None, subaccounts=None, limit=None, expand_user=None):
@@ -353,21 +352,21 @@ class bitlyapi(object):
         if expand_user:
             params['expand_user'] = expand_user
         response = self.send_request(
-            'get', self.ssl_host+'v3/link/encoders_by_count', params)
+            'get', self.ssl_host + 'v3/link/encoders_by_count', params)
         return response
 
     def link_encoders_count(self, link):
         params = dict(access_token=self.access_token)
         params['link'] = link
         response = self.send_request(
-            'get', self.ssl_host+'v3/link/encoders_by_count', params)
+            'get', self.ssl_host + 'v3/link/encoders_by_count', params)
         return response
 
     def bundle_archive(self, bundle_link):
         params = dict(access_token=self.access_token)
         params['bundle_link'] = bundle_link
         response = self.send_request(
-            'get', self.ssl_host+'v3/bundle/archive', params)
+            'get', self.ssl_host + 'v3/bundle/archive', params)
         return response
 
     def bundles_by_user(self, user, expand_user=None):
@@ -376,14 +375,14 @@ class bitlyapi(object):
         if expand_user:
             params['expand_user'] = expand_user
         response = self.send_request(
-            'get', self.ssl_host+'v3/bundle/bundles_by_user', params)
+            'get', self.ssl_host + 'v3/bundle/bundles_by_user', params)
         return response
 
     def bundle_clone(self, bundle_link):
         params = dict(access_token=self.access_token)
         params['bundle_link'] = bundle_link
         response = self.send_request(
-            'get', self.ssl_host+'v3/bundle/clone', params)
+            'get', self.ssl_host + 'v3/bundle/clone', params)
         return response
 
     def bundle_collaborator_add(self, bundle_link, collaborator):
@@ -391,7 +390,7 @@ class bitlyapi(object):
         params['bundle_link'] = bundle_link
         params['collaborator'] = collaborator
         response = self.send_request(
-            'get', self.ssl_host+'v3/bundle/collaborator_add', params)
+            'get', self.ssl_host + 'v3/bundle/collaborator_add', params)
         return response
 
     def bundle_collaborator_remove(self, bundle_link, collaborator):
@@ -399,7 +398,7 @@ class bitlyapi(object):
         params['bundle_link'] = bundle_link
         params['collaborator'] = collaborator
         response = self.send_request(
-            'get', self.ssl_host+'v3/bundle/collaborator_remove', params)
+            'get', self.ssl_host + 'v3/bundle/collaborator_remove', params)
         return response
 
     def bundle_contents(self, bundle_link, expand_user=None):
@@ -408,7 +407,7 @@ class bitlyapi(object):
         if expand_user:
             params['expand_user'] = expand_user
         response = self.send_request(
-            'get', self.ssl_host+'v3/bundle/contents', params)
+            'get', self.ssl_host + 'v3/bundle/contents', params)
         return response
 
     def bundle_create(self, private=None, title=None, description=None):
@@ -421,7 +420,7 @@ class bitlyapi(object):
         if description:
             params['description'] = description
         response = self.send_request(
-            'get', self.ssl_host+'v3/bundle/create', params)
+            'get', self.ssl_host + 'v3/bundle/create', params)
         return response
 
     def bundle_edit(self, bundle_link, edit=None, private=None, title=None, description=None, preview=None, og_image=None):
@@ -441,7 +440,7 @@ class bitlyapi(object):
             params['og_image'] = og_image
 
         response = self.send_request(
-            'get', self.ssl_host+'v3/bundle/edit', params)
+            'get', self.ssl_host + 'v3/bundle/edit', params)
         return response
 
     def bundle_link_add(self, bundle_link, link, title=None):
@@ -453,7 +452,7 @@ class bitlyapi(object):
             params['title'] = title
 
         response = self.send_request(
-            'get', self.ssl_host+'v3/bundle/link_add', params)
+            'get', self.ssl_host + 'v3/bundle/link_add', params)
         return response
 
     def bundle_link_comment_add(self, bundle_link, link, comment):
@@ -464,7 +463,7 @@ class bitlyapi(object):
         params['comment'] = comment
 
         response = self.send_request(
-            'get', self.ssl_host+'v3/bundle/link_comment_add', params)
+            'get', self.ssl_host + 'v3/bundle/link_comment_add', params)
         return response
 
     def bundle_link_comment_edit(self, bundle_link, link, comment_id, comment):
@@ -474,7 +473,7 @@ class bitlyapi(object):
         params['comment_id'] = comment_id
         params['comment'] = comment
         response = self.send_request(
-            'get', self.ssl_host+'v3/bundle/link_comment_edit', params)
+            'get', self.ssl_host + 'v3/bundle/link_comment_edit', params)
         return response
 
     def bundle_link_comment_remove(self, bundle_link, link, comment_id):
@@ -484,7 +483,7 @@ class bitlyapi(object):
         params['comment_id'] = comment_id
 
         response = self.send_request(
-            'get', self.ssl_host+'v3/bundle/link_comment_remove', params)
+            'get', self.ssl_host + 'v3/bundle/link_comment_remove', params)
         return response
 
     def bundle_link_edit(self, bundle_link, link, edit, title=None, preview=None):
@@ -500,7 +499,7 @@ class bitlyapi(object):
             params['preview'] = preview
 
         response = self.send_request(
-            'get', self.ssl_host+'v3/bundle/link_edit', params)
+            'get', self.ssl_host + 'v3/bundle/link_edit', params)
         return response
 
     def bundle_link_remove(self, bundle_link, link):
@@ -508,7 +507,7 @@ class bitlyapi(object):
         params['bundle_link'] = bundle_link
         params['link'] = link
         response = self.send_request(
-            'get', self.ssl_host+'v3/bundle/link_remove', params)
+            'get', self.ssl_host + 'v3/bundle/link_remove', params)
         return response
 
     def bundle_link_reorder(self, bundle_link, link, display_order):
@@ -517,7 +516,7 @@ class bitlyapi(object):
         params['link'] = link
         params['display_order'] = display_order
         response = self.send_request(
-            'get', self.ssl_host+'v3/bundle/link_reorder', params)
+            'get', self.ssl_host + 'v3/bundle/link_reorder', params)
         return response
 
     def bundle_pending_collaborator_remove(self, bundle_link, collaborator):
@@ -525,7 +524,7 @@ class bitlyapi(object):
         params['bundle_link'] = bundle_link
         params['collaborator'] = collaborator
         response = self.send_request(
-            'get', self.ssl_host+'v3/bundle/pending_collaborator_remove', params)
+            'get', self.ssl_host + 'v3/bundle/pending_collaborator_remove', params)
         return response
 
     def bundle_reorder(self, bundle_link, link):
@@ -533,14 +532,14 @@ class bitlyapi(object):
         params['bundle_link'] = bundle_link
         params['link'] = link
         response = self.send_request(
-            'get', self.ssl_host+'v3/bundle/reorder', params)
+            'get', self.ssl_host + 'v3/bundle/reorder', params)
         return response
 
     def bundle_view_count(self, bundle_link):
         params = dict(access_token=self.access_token)
         params['bundle_link'] = bundle_link
         response = self.send_request(
-            'get', self.ssl_host+'v3/bundle/view_count', params)
+            'get', self.ssl_host + 'v3/bundle/view_count', params)
         return response
 
     def user_bundle_history(self, expand_user=None):
@@ -548,28 +547,28 @@ class bitlyapi(object):
         if expand_user:
             params['expand_user'] = expand_user
         response = self.send_request(
-            'get', self.ssl_host+'v3/user/bundle_history', params)
+            'get', self.ssl_host + 'v3/user/bundle_history', params)
         return response
 
     def bitly_pro_domain(self, domain):
         params = dict(access_token=self.access_token)
         params['domain'] = domain
         response = self.send_request(
-            'get', self.ssl_host+'v3/bitly_pro_domain', params)
+            'get', self.ssl_host + 'v3/bitly_pro_domain', params)
         return response
 
     def user_tracking_domain_clicks(self, domain, **kwargs):
         params = dict(access_token=self.access_token)
         params['domain'] = domain
         response = self.send_metrics_request(
-            'get', self.ssl_host+'v3/user/tracking_domain_clicks', params, **kwargs)
+            'get', self.ssl_host + 'v3/user/tracking_domain_clicks', params, **kwargs)
         return response
 
     def user_tracking_domain_shorten_counts(self, domain, **kwargs):
         params = dict(access_token=self.access_token)
         params['domain'] = domain
         response = self.send_metrics_request(
-            'get', self.ssl_host+'v3/user/tracking_domain_shorten_counts', params, **kwargs)
+            'get', self.ssl_host + 'v3/user/tracking_domain_shorten_counts', params, **kwargs)
         return response
 
     def send_request(self, method, url, params=None, headers=None, timeout=60):
@@ -618,8 +617,8 @@ class bitlyauthentication(object):
         self.host = 'https://bitly.com/oauth/'
 
     def authorization_url(self):
-        rty = self.host+"authorize?client_id="+self.client_id
-        rty += "&redirect_uri="+self.redirect_uri
+        rty = self.host + "authorize?client_id=" + self.client_id
+        rty += "&redirect_uri=" + self.redirect_uri
         self.auth_url = rty
         return rty
 
@@ -635,13 +634,11 @@ class bitlyauthentication(object):
         # info = urllib.request.urlopen(
         #     "https://api-ssl.bitly.com/oauth/access_token", params)
         info = requests.post('https://api-ssl.bitly.com/oauth/access_token', params=params)
-        print (info.text)
         info = str(info.text)
         info = info.split('=')
         info = info[1].split('&')
 
         access_token = info[0]
-        print (access_token)
         self.access_token = access_token
         return access_token
 
