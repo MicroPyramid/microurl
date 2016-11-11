@@ -1,7 +1,3 @@
-========
-microurl
-========
-
 .. image:: https://readthedocs.org/projects/microurl/badge/?version=latest
     :target: http://microurl.readthedocs.io/en/latest/?badge=latest
 .. image:: https://img.shields.io/pypi/dm/microurl.svg
@@ -59,8 +55,8 @@ First, you'll want to import your desired minfier from microurl
     from microurl import google_mini
 
 
-Basic Usage
------------
+Basic Usage Of Google Mini
+--------------------------
 
 **Function definitions (i.e. google_mini()) can be found by reading over microurl/google.py**
 
@@ -105,8 +101,8 @@ Authentication using username and password
     access_token=authentication.get_accesstoken_from_username_pwd(bitlyusername or login email,password)
 
 
-Basic Usage
------------
+Basic Usage of Bitly
+--------------------
 
 **Function definitions (i.e. shorturl()) can be found by reading over microurl/bitly.py**
 
@@ -173,7 +169,7 @@ microurl is useful, but ultimately only as useful as the people using it (say th
 
 For more Updates
 ----------------
-https://micropyramid.com/opensource/microurl
+https://micropyramid.com/oss/
 
 
 We welcome your feedback and support, raise github ticket if you want to report a bug. Need new features? `Contact us here`_

@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name='microurl',
-    version='0.1',
+    version='0.1.1',
     description='microurl is a python module to create minfied urls',
     author='MicroPyramid',
     author_email='hello@micropyramid.com',
