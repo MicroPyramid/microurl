@@ -11,8 +11,8 @@ install:
   - pip install coveralls
 
 script:
-  - python -m unittest tests.test_bitly_minify  tests.test_google_minify
-  - coverage run --source=microurl,tests -m unittest tests.test_bitly_minify  tests.test_google_minify
+  - python setup.py test
+  - coverage run --source=microurl,tests setup.py test
 
 after_success:
   coveralls

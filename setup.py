@@ -18,5 +18,6 @@ setup(
     install_requires=[
         'requests',
     ],
+    test_suite='tests.test_suite',
     zip_safe=True,
 )
