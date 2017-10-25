@@ -65,37 +65,6 @@ class TestBitly(unittest.TestCase):
                                       user_ts=ts)
         self.assertTrue(result)
 
-    def test_highvalue(self):
-        bitly = self.get_bitly()
-        result = bitly.highvalue(limit=10)
-        self.assertTrue(result)
-
-    def test_search(self):
-        bitly = self.get_bitly()
-        result = bitly.search(query="micro url",
-                              limit=10,
-                              offset=0,
-                              lang='en',
-                              cities="hyderabad,banglore",
-                              domain="micropyramid.com",
-                              fields='helloworld')
-        self.assertTrue(result)
-
-    # def test_bursting_phrases(self):
-    #     bitly = self.get_bitly()
-    #     result = bitly.bursting_phrases()
-    #     self.assertTrue(result)
-
-    # def test_hot_phrases(self):
-    #     bitly = self.get_bitly()
-    #     result = bitly.hot_phrases()
-    #     self.assertTrue(result)
-
-    # def test_clickrate(self):
-    #     bitly = self.get_bitly()
-    #     result = bitly.clickrate("micro piramid")
-    #     self.assertTrue(result)
-
     def test_link_info(self):
         bitly = self.get_bitly()
         result = bitly.link_info("http://kjlssjd1sd.com")

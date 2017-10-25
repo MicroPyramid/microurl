@@ -84,89 +84,11 @@ class bitlyapi(object):
             'get', self.ssl_host + 'v3/user/link_save', params)
         return response
 
-    def highvalue(self, limit=10):
-        params = dict(limit=limit)
-        params['access_token'] = self.access_token
-        response = self.send_request(
-            'get', self.ssl_host + 'v3/highvalue', params)
-        return response
-
-    def search(self, query, limit=10, offset=0, lang='en', cities=None, domain=None, fields=None):
-        params = dict(limit=limit)
-        params['offset'] = offset
-        params['query'] = query
-        params['lang'] = lang
-        if cities:
-            params['cities'] = cities
-        if domain:
-            params['domain'] = domain
-        if fields:
-            params['fields'] = fields
-
-        params['access_token'] = self.access_token
-        response = self.send_request('get', self.ssl_host + 'v3/search', params)
-        return response
-
-    def bursting_phrases(self):
-        params = dict(access_token=self.access_token)
-        response = self.send_request(
-            'get', self.ssl_host + 'v3/realtime/bursting_phrases', params)
-        return response
-
-    def hot_phrases(self):
-        params = dict(access_token=self.access_token)
-        response = self.send_request(
-            'get', self.ssl_host + 'v3/realtime/hot_phrases', params)
-        return response
-
-    def clickrate(self, phrase):
-        params = dict(access_token=self.access_token)
-        params['phrase'] = phrase
-        response = self.send_request(
-            'get', self.ssl_host + 'v3/realtime/clickrate', params)
-        return response
-
     def link_info(self, link):
         params = dict(access_token=self.access_token)
         params['link'] = link
         response = self.send_request(
             'get', self.ssl_host + 'v3/link/info', params)
-        return response
-
-    def link_content(self, link, content_type='html'):
-        params = dict(access_token=self.access_token)
-        params['link'] = link
-        params['content_type'] = content_type
-        response = self.send_request(
-            'get', self.ssl_host + 'v3/link/content', params)
-        return response
-
-    def link_category(self, link):
-        params = dict(access_token=self.access_token)
-        params['link'] = link
-        response = self.send_request(
-            'get', self.ssl_host + 'v3/link/category', params)
-        return response
-
-    def link_social(self, link):
-        params = dict(access_token=self.access_token)
-        params['link'] = link
-        response = self.send_request(
-            'get', self.ssl_host + 'v3/link/social', params)
-        return response
-
-    def link_location(self, link):
-        params = dict(access_token=self.access_token)
-        params['link'] = link
-        response = self.send_request(
-            'get', self.ssl_host + 'v3/link/location', params)
-        return response
-
-    def link_language(self, link):
-        params = dict(access_token=self.access_token)
-        params['link'] = link
-        response = self.send_request(
-            'get', self.ssl_host + 'v3/link/language', params)
         return response
 
     def app_details(self, client_id):
@@ -586,7 +508,6 @@ class bitlyapi(object):
         response = response.json()
         if 'data' in response:
             response = response['data']
-
         return response
 
     def send_metrics_request(self, method, url, params, unit=None, units=None, timezone=None, rollup=None, limit=None, unit_reference_ts=None):
