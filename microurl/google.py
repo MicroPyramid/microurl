@@ -28,4 +28,3 @@ def google_expand(short_url, Google_API_KEY):
 
 def qrcode(url):
     return 'http://chart.googleapis.com/chart?cht=qr&chs=300x300&chl=' + url
-
